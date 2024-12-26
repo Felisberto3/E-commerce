@@ -31,7 +31,7 @@ const MenuDialog = () => (
                             <a href="#offers" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <MdLocalOffer size={22} /><span>OFFERS</span></li></a>
                             <a href="#about" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 ">  <MdLocalOffer size={22} /><span>ABOUT</span></li></a>
                             <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <FaPhone /><span>CONTACT</span></li></a>
-                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md "><li className="flex items-center gap-4 ">  <PiShoppingCartBold size={22} /><span>COMPRAR</span></li></a>
+                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-full "><li className="flex items-center gap-4 ">  <PiShoppingCartBold size={22} /><span>COMPRAR</span></li></a>
                         </ul>
 
                     </div>

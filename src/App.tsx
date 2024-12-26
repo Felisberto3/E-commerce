@@ -1,4 +1,6 @@
+import { Banner } from "./components/banner";
 import { Header } from "./components/header";
+import { Menu } from "./components/menu";
 import MenuDialog from "./components/menuDialog";
 
 function App() {
@@ -7,6 +9,8 @@ function App() {
   return (
     <>
       <Header />
+      <Banner />
+      <Menu />
     </>
 
   )
