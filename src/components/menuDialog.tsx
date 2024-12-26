@@ -2,6 +2,10 @@ import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { LuMoveLeft } from "react-icons/lu";
 import { IoMenu } from "react-icons/io5";
+import { PiShoppingCartBold } from "react-icons/pi";
+import { FaPhone } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { MdLocalOffer } from "react-icons/md";
 
 const MenuDialog = () => (
     <Dialog.Root>
@@ -23,11 +27,11 @@ const MenuDialog = () => (
                         </div>
 
                         <ul className="py-4 flex flex-col gap-1 *:py-2.5 *:px-2  ">
-                            <a href="#home" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li>HOME</li></a>
-                            <a href="#menu" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md" ><li>MENU</li></a>
-                            <a href="#offers" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li>OFFERS</li></a>
-                            <a href="#about" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li>ABOUT</li></a>
-                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li>CONTACT</li></a>
+                            <a href="#home" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <FaHome size={22} /><span>HOME</span></li></a>
+                            <a href="#offers" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <MdLocalOffer size={22} /><span>OFFERS</span></li></a>
+                            <a href="#about" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 ">  <MdLocalOffer size={22} /><span>ABOUT</span></li></a>
+                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <FaPhone /><span>CONTACT</span></li></a>
+                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md "><li className="flex items-center gap-4 ">  <PiShoppingCartBold size={22} /><span>COMPRAR</span></li></a>
                         </ul>
 
                     </div>
