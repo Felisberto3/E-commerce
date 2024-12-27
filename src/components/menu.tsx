@@ -14,7 +14,7 @@ export function Menu() {
                     products.map(({ id, name, price }) => {
                         const total = cart.find(item => item.id === id)?.total
 
-                        return <div className="border mx-auto" key={id}>
+                        return <div className="border mx-auto scroll-m-4" key={id}>
                             <img src={item} alt="" className="p-2 mx-auto" />
 
                             <h2 className="text-center py-2 text-xl">{name}</h2>

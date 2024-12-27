@@ -12,12 +12,12 @@ const products = [
     { id: "9", name: "Five Guys", price: 18350, },
     { id: "10", name: "Chick-fil-A", price: 18350.32 },
 ]
-interface Iproducts {
+export interface Iproducts {
     id: string;
     name: string;
     price: number
 }
-interface Icart {
+export interface Icart {
     id: string,
     total: number
 }
