@@ -1,6 +1,8 @@
 
 import caxorro from "../assets/delicious-burger.jpg"
+import { shoppStore } from "../utils/zustand"
 export const Banner = () => {
+    // const { cart, products } = shoppStore()
     return (
         <div className="h-screen border relative max-w-[1101px] mx-auto sm:text-red-50  px-2">
             <img src={caxorro} className=" absolute inset-0  block w-full h-full object-cover dark:brightness-50 dark:contrast-125" alt="" />
