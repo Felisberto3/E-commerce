@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { LuMoveLeft } from "react-icons/lu";
 import { IoMenu } from "react-icons/io5";
@@ -8,7 +8,24 @@ import { FaHome } from "react-icons/fa";
 import { MdLocalOffer } from "react-icons/md";
 import CartShopping from "./cartDialog";
 
+
+const handleDarkMood = () => {
+
+
+    const isDark = document.querySelector("body")?.classList.toggle("dark")
+    let mood = isDark ? "dark" : "light"
+    console.log(mood);
+
+    localStorage.setItem("mood", mood)
+
+    console.log(document.querySelector("body"));
+
+
+
+
+}
 const MenuDialog = () => (
+
     <Dialog.Root>
         <Dialog.Trigger asChild>
             <div className="p-2 border rounded-full hover:cursor-pointer dark:text-slate-200 md:hidden">
@@ -27,15 +44,17 @@ const MenuDialog = () => (
                             Voltar
                         </div>
 
-                        <ul className="py-4 flex flex-col gap-1 *:py-2.5 *:px-2  ">
+                        <ul className="py-4 list-none flex flex-col gap-1 *:py-2.5 *:px-2  ">
                             <a href="#home" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <FaHome size={22} /><span>HOME</span></li></a>
                             <a href="#offers" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <MdLocalOffer size={22} /><span>OFFERS</span></li></a>
                             <a href="#about" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 ">  <MdLocalOffer size={22} /><span>ABOUT</span></li></a>
-                            <a href="#contact" className="hover:bg-slate-100 dark:hover:bg-gray-700 hover:rounded-md"><li className="flex items-center gap-4 "> <FaPhone /><span>CONTACT</span></li></a>
                         </ul>
 
                     </div>
                 </Dialog.Close>
+                <div className="flex items-center gap-4  px-3.5 py-2 rounded-full border  dark:hover:text-slate-400  dark:hover:border-slate-400" onClick={handleDarkMood}>
+                    <FaPhone /><span>DArk Mood</span>
+                </div>
                 <CartShopping />
             </Dialog.Content>
         </Dialog.Portal>
